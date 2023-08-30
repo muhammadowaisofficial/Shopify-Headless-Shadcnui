@@ -6,7 +6,7 @@ import type {
 
 const gql = String.raw
 
-export async function getProductsByCollection(): Promise<Article[]> {
+export async function getBlogs(): Promise<Article[]> {
     const data = await storefrontQuery<"articles", ArticleConnection>(query)
     const articles: Article[] = data.articles.nodes
     return articles
